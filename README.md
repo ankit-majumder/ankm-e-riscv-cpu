@@ -18,9 +18,10 @@ Planned:
 - RISC-V Compliance and Benchmarke suites
 
 # ISA Design:
-See ISADESIGNDOC.md
+See ISADESIGNDOC.md file
 
 # Datapath/Microarchitecture:
+See RTLDATAPATH file
 
 # Design Decisions:
 - Seperate Instruction Memory and Data Memory, instructions must be read and memory must be written to in the same cycle for single-cycle implementation
