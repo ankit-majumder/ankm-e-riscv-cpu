@@ -24,8 +24,7 @@ See ISADESIGNDOC.md file
 See RTLDATAPATH file
 
 # Design Decisions:
-- Seperate Instruction Memory and Data Memory, instructions must be read and memory must be written to in the same cycle for single-cycle implementation
-- Control Unit is combinational, not sequential because the control signals depend solely on the instruction encoding, and changing control signals mid-clock cycle does not affect current instruction processing
+See LEARNING_JOURNAL.md file for decisions categorized by Date
 
 # Tools/Environment:
 - AMD Vivado for final simulation / synthesis
