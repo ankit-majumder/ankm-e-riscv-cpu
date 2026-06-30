@@ -31,3 +31,13 @@
 `define ALU_SLT  4'b1000
 `define ALU_SLTU 4'b1001
 
+//Opcode Encodings:
+`define OP_RTYPE  7'b0110011
+`define OP_ITYPE  7'b0010011
+`define OP_LOAD   7'b0000011
+`define OP_STYPE  7'b0100011
+`define OP_BTYPE 7'b1100011
+`define OP_JTYPE    7'b1101111
+`define OP_JALR   7'b1100111
+`define OP_LUI    7'b0110111
+`define OP_AUIPC  7'b0010111

@@ -31,11 +31,11 @@ module ALU(
     output reg signed [31:0] result,
     output z
     );
-    wire [32:0] sub = {1'b0, a} - {1'b0, b};
+
     always@(*) begin
         case(alu_op)
             `ALU_ADD: result = a + b;
-            `ALU_SUB: result = sub[31:0]; 
+            `ALU_SUB: result = a - b;
             `ALU_AND: result = a & b;
             `ALU_OR: result = a | b;
             `ALU_XOR: result = a ^ b;
