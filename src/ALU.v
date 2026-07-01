@@ -44,6 +44,7 @@ module ALU(
             `ALU_SRA: result = $signed(a) >>> b[4:0];
             `ALU_SLT: result = $signed(a) < $signed(b);
             `ALU_SLTU: result = a < b;
+            `ALU_LUI: result = b;
             default: result = 32'b0;         
          endcase         
        end
