@@ -42,3 +42,11 @@
 `define OP_JALR   7'b1100111
 `define OP_LUI    7'b0110111
 `define OP_AUIPC  7'b0010111
+
+//Immediate Encodings
+`define IMM_ITYPE 3'b000
+`define IMM_STORE 3'b001
+`define IMM_BRANCH 3'b010
+`define IMM_UTYPE 3'b011
+`define IMM_JAL 3'b100
+
