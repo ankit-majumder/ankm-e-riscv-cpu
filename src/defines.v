@@ -51,10 +51,20 @@
 `define IMM_JAL 3'b100
 
 //Branch Encodings:
-`define NONE 3'b000;
-`define BEQ 3'b001;
-`define BNE 3'b010;
-`define BLT 3'b011;
-`define BGE 3'b100;
-`define BLTU 3'b101;
-`define BGEU 3'b110;
+`define NONE 3'b000
+`define BEQ 3'b001
+`define BNE 3'b010
+`define BLT 3'b011
+`define BGE 3'b100
+`define BLTU 3'b101
+`define BGEU 3'b110
+
+//PC Controls:
+`define STANDARD 2'b00
+`define JAL  2'b01
+`define JALR 2'b10
+
+//Writeback Controls:
+`define WB_ALU 2'b00
+`define WB_DMEM 2'b01
+`define WB_PC 2'b10
