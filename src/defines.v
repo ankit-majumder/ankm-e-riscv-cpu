@@ -51,9 +51,10 @@
 `define IMM_JAL 3'b100
 
 //Branch Encodings:
-`define BEQ 3'b000;
-`define BNE 3'b001;
-`define BLT 3'b010;
-`define BGE 3'b011;
-`define BLTU 3'b100;
-`define BGEU 3'b101;
+`define NONE 3'b000;
+`define BEQ 3'b001;
+`define BNE 3'b010;
+`define BLT 3'b011;
+`define BGE 3'b100;
+`define BLTU 3'b101;
+`define BGEU 3'b110;
