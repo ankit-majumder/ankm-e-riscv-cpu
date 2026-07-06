@@ -100,5 +100,26 @@ module intr_decode(
          if(opcode == `OP_RTYPE || opcode == `OP_ITYPE)wb_ctrl = `WB_ALU;
          else if(opcode == `OP_LOAD) wb_ctrl = `WB_DMEM;
          else if(opcode == `OP_JTYPE || opcode == `OP_JALR) wb_ctrl = `WB_PC;
+
+         //Memory Alignment Control
+         mem_ctrl = `MEM_W; //default word aligned memory
+         if(opcode == `OP_LOAD) begin
+            case(funct3)
+                3'b000: mem_ctrl = `MEM_B;
+                3'b001: mem_ctrl = `MEM_H;
+                3'b010: mem_ctrl = `MEM_W;
+                3'b100: mem_ctrl = `MEM_BU;
+                3'b101: mem_ctrl = `MEM_HU;
+                default : mem_ctrl = `MEM_W;
+             endcase
+         end
+         else if(opcode == `OP_STYPE) begin
+            case(funct3)
+                3'b000: mem_ctrl = `MEM_B;
+                3'b001: mem_ctrl = `MEM_H;
+                3'b010: mem_ctrl = `MEM_W;
+                default: mem_ctrl = `MEM_W;
+             endcase
+         end
        end
 endmodule

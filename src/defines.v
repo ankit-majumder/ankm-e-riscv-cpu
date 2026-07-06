@@ -68,3 +68,10 @@
 `define WB_ALU 2'b00
 `define WB_DMEM 2'b01
 `define WB_PC 2'b10
+
+//Memory Alginment Controls
+`define MEM_W 3'b000
+`define MEM_H 3'b001 
+`define MEM_B 3'b010
+`define MEM_HU 3'b011
+`define MEM_BU 3'b100
