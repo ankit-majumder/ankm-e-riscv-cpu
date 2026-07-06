@@ -33,7 +33,7 @@ module instr_decode_tb();
     wire[1:0] wb_ctrl;
     
     intr_decode dut(.funct7(funct7), .funct3(funct3), .opcode(opcode), .rf_we(rf_we), .alu_ctrl1(alu_ctrl1), .alu_ctrl2(alu_ctrl2), .data_read(data_read), .data_write(data_write), .imm_ctrl(imm_ctrl),
-    .alu_op(alu_op), .branch_type(branch_type), .pc_control(pc_control), .wb_ctrl(wb_ctrl));
+    .alu_op(alu_op), .branch_type(branch_type), .pc_control(pc_control), .wb_ctrl(wb_ctrl), .mem_ctrl(mem_ctrl));
     
     initial begin
         //R_type Instructions
