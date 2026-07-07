@@ -32,6 +32,7 @@ Notes:
 7. fence, ecall/ebreak, and csr instructions are stubbed and implemented as NOP, as they will not be called on a single cycle bare metal cpu with no operating system
 8. For ecall and ebreak encoding, the funct7 columns are the hardcoded values of the immediates, not actual funct7 values.
 9. All loads are sign extended, and all immediates are treated as signed values unless otherwise specified
+10. Despite 32 bit address space, only 1024 Bytes of memory are actually mapped, from location 0x0 to location 0x3FF due to student project limitations.
 
 Instruction Formats:  
 [a:b] represents bits a to b  
