@@ -26,7 +26,7 @@ Notes:
 2. Instructions are 2 Byte Aligned Little Endian Packets.
 3. Memory Accesses must be 4-byte aligned for lw and 2-byte aligned for lh, in practice
 3. B and J Instructions are the same as S and U instructions respectively, but implicitly shift immediate values right by 1, since instructions are 2 byte aligned in the instruction compression extension (however, for this processor they will 4 byte aligned in practice)
-4. All branch immediates are sign extended
+4. All immediates are sign extended
 5. In practice, JALR rs1 will be x1 (Link Register), imm will be 0, and rd can be x0 (discard function pc) or general purpose (store function pc)
 6. JALR clears the bit 0 of the pc to force function return to be 2-byte aligned
 7. fence, ecall/ebreak, and csr instructions are stubbed and implemented as NOP, as they will not be called on a single cycle bare metal cpu with no operating system
