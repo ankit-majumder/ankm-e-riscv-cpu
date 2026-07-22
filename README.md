@@ -2,7 +2,7 @@
 ANKM-E is an educational level pipelined RISC-V processor created by Ankit Majumder
 
 # Overview: 
-As a current rising Junior at UT Austin, this self-directed project is my first foray into computer architecture and chip design. RISC-V is a fast growing ISA with similarities to the MIPS and LC3 ISA's which I have previously learned, so it seemed like the natural ISA on which to build my microarchitecture and develop my processor. Using previous knowledge on datapaths, verilog, and sequential logic from the ECE316 class taught by Professor Orshansky, and self studying computer architecture lectures by Professor Mutlu, my final goal is a fully functional, pipelined, compliance tested RISC-V CPU with a simulated cache, synthesized onto a BASYS-3 board. 
+As a current rising Junior at UT Austin, this self-directed project is my first foray into computer architecture and chip design. RISC-V is a fast growing ISA with similarities to the MIPS and LC3 ISA's which I have previously learned, so it seemed like the natural ISA on which to build my microarchitecture and develop my processor. Using previous knowledge on datapaths, verilog, sequential logic from the ECE316, and self studying computer architecture lectures by Professor Mutlu, my final goal is a fully functional, pipelined, compliance tested RISC-V CPU with a simulated cache, synthesized onto a BASYS-3 board. 
 
 # Current Status:
 Completed:
@@ -22,9 +22,6 @@ See ISADESIGNDOC.md file
 
 # Datapath/Microarchitecture:
 See RTLDATAPATH file
-
-# Design Decisions:
-See LEARNING_JOURNAL.md file for decisions categorized by Date
 
 # Tools/Environment:
 - AMD Vivado for final simulation / synthesis
