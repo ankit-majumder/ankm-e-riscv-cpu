@@ -26,12 +26,12 @@ module adder(input[31:0] pc, val, output[31:0] result);
 endmodule
 
 //branch/jump select
-module pcmux(input[31:0] pcplus4, pcplusimm, aluresult, input[1:0] pc_select, output reg[31:0] pc_next);
+module mux3(input[31:0] a, b, c, input[1:0] select, output reg[31:0] result);
     always@(*) begin
-        case(pc_select)
-            `STANDARD: pc_next = pcplus4;
-            `JAL: pc_next = pcplusimm;
-            `JALR: pc_next = aluresult;
+        case(select)
+            2'b00: result = a;
+            2'b01: result = b;
+            2'b10: result = c;
         endcase
     end        
 endmodule
