@@ -54,7 +54,7 @@ J: [31 => imm[20](sign bit)][30:21 => imm[10:1]][20 => imm[11]][19:12 => imm[19:
 |xor|R-Type|100|0000000|0110011|xor rd, rs1, rs2|rd=rs1^rs2|
 |srl|R-Type|101|0000000|0110011|srl rd, rs1, rs2|rd=rs1>>rs2, sign bit discarded|
 |sra|R-Type|101|0100000|0110011|sra rd, rs1, rs2|rd=rs1>>rs2, sign bit retained|
-|or|R-Type|110|0000000|0110011|or rd, rs1, rs2|rd=rs1|rs2|
+|or|R-Type|110|0000000|0110011|or rd, rs1, rs2|rd=rs1 OR rs2|
 |and|R-Type|111|0000000|0110011|and rd, rs1, rs2|rd=rs1&rs2|
 
 # I-Type Instructions
@@ -74,7 +74,7 @@ J: [31 => imm[20](sign bit)][30:21 => imm[10:1]][20 => imm[11]][19:12 => imm[19:
 |xori|I-Type|100|-------|0010011|xori rd, rs1, imm|rd=rs1^imm|
 |srli|I-Type|101|0000000|0010011|srli rd, rs1, imm|rd=rs1>>imm, sign bit discarded|
 |srai|I-Type|101|0100000|0010011|srai rd, rs1, imm|rd=rs1>>imm, sign bit retained|
-|ori|I-Type|110|-------|0010011|ori rd, rs1, imm|rd=rs1|imm|
+|ori|I-Type|110|-------|0010011|ori rd, rs1, imm|rd = rs1 OR imm|
 |andi|I-Type|111|-------|0010011|andi rd, rs1, imm|rd=rs1&imm|
 |jalr|I-Type|000|-------|1100111|jalr rd, rs1, imm|rd=pc+4, pc=(rs1+imm)& ~(0x01)
 |ecall|I-Type|000|000000000001|1110011|--------|Stubbed (Implemented as NOP)
